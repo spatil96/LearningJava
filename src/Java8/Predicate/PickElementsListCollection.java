@@ -1,4 +1,4 @@
-package Java8;
+package Java8.Predicate;
 
 import java.util.ArrayList;
 import java.util.List;
