@@ -2,7 +2,7 @@ package HackerRank.Java;
 
 public class IPMatch {
     public static void main(String[] args) {
-        //Scanner in = new Scanner(System.in);
+
         //while(in.hasNext()){
                 /*
                 000.12.12.034
