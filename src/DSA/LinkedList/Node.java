@@ -4,7 +4,7 @@ public class Node {
     Node head;
     String data;
     Node next;
-
+    int size;
     public Node() {
     }
 
@@ -14,40 +14,87 @@ public class Node {
         // to null reference. As it will be the last in the LL
     }
 
-
-
-
     public void addFirst(String data) {
         Node newNode = new Node(data);
-        if(head ==null){
+        size++;
+        if (head == null) {
             head = newNode;
             return;
         }
         newNode.next = head;
         head = newNode;
     }
-    public void addLast(String data){
+
+    public void addLast(String data) {
         Node newNode = new Node(data);
-        if(head ==null){
+        size++;
+        if (head == null) {
             head = newNode;
             return;
         }
         Node currNode = head;
-        while(currNode.next != null){
+        while (currNode.next != null) {
             currNode = currNode.next;
         }
         currNode.next = newNode;
     }
-    public void printList(){
-        if(head==null){
+
+    public void printList() {
+        if (head == null) {
             System.out.println("List is empty");
-            return ;
+            return;
         }
         Node currNode = head;
-        while(currNode != null){
-            System.out.print(currNode.data+"->");
+        while (currNode != null) {
+            System.out.print(currNode.data + "->");
             currNode = currNode.next;
         }
         System.out.print("NUll");
+    }
+
+    public void delFirst() {
+        if (head == null) {
+            System.out.println("The list is empty");
+            return;
+        }
+        head = head.next;
+    }
+
+    public void delLast() {
+        if (head == null) {
+            System.out.println("The list is empty");
+            return;
+        }
+        size--;
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+        Node lastNode = head.next;
+        Node secondLastNode = head;
+        while (lastNode != null) {
+            lastNode = lastNode.next;
+            secondLastNode = secondLastNode.next;
+        }
+        secondLastNode.next = null;
+    }
+    public int getSize(){
+        return size;
+    }
+    public void reverseLL(){
+        if(head==null || head.next==null){
+            System.out.println("Either the list is empty or having one element");
+            return;
+        }
+        Node currNode = head.next;
+        Node prevNode = head;
+        while(currNode!=null){
+            Node nextNode = currNode.next;
+            currNode.next = prevNode;
+            prevNode=currNode;
+            currNode = nextNode;
+        }
+        head.next=null;
+        head = prevNode;
     }
 }
