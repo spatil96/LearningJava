@@ -14,21 +14,8 @@ public class Node {
         // to null reference. As it will be the last in the LL
     }
 
-    public String getData() {
-        return data;
-    }
 
-    public void setData(String data) {
-        this.data = data;
-    }
 
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node node) {
-        this.next = next;
-    }
 
     public void addFirst(String data) {
         Node newNode = new Node(data);
