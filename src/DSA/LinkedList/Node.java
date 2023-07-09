@@ -81,6 +81,7 @@ public class Node {
     public int getSize(){
         return size;
     }
+    //This is a iterative approach
     public void reverseLL(){
         if(head==null || head.next==null){
             System.out.println("Either the list is empty or having one element");
@@ -97,4 +98,9 @@ public class Node {
         head.next=null;
         head = prevNode;
     }
+    //Reversing a linkedList using the recursive approach
+    public Node revRecursiveLL(Node node){
+        return null;
+    }
+
 }
