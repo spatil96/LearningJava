@@ -81,7 +81,7 @@ public class Node {
     public int getSize(){
         return size;
     }
-    //This is a iterative approach
+    //This is an iterative approach
     public void reverseLL(){
         if(head==null || head.next==null){
             System.out.println("Either the list is empty or having one element");

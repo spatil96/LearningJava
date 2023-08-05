@@ -14,7 +14,7 @@ class B extends A {
     }
 }
 class CompileVSRuntimeBindStaticVar {
-    public static void main(String args[])
+    public static void main(String []args)
     {
         A a = new B();
         System.out.println(a.temp);
