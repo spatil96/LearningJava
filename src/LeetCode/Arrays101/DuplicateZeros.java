@@ -1,27 +1,22 @@
 package LeetCode.Arrays101;
 
+import java.util.Arrays;
+
 public class DuplicateZeros {
     public static void main(String[] args) {
         duplicateZeros( new int[] {1,0,2,3,0,4,5,0});
         duplicateZeros( new int[] {1,2,3});
     }
     public static void duplicateZeros(int[] arr) {
-        for(int print :arr){
-            System.out.print(print+" ");
-        }
-        for(int i=0;i< arr.length-1;i++){
-            if(arr[i] == 0){
-                for(int j=i ;j<arr.length-1;j++){
-                    int temp =arr[j++];
-                    arr[j++] = 0;
-                    arr[j+2]=temp;
-
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == 0) {
+                for (int j = arr.length - 1; j > i; j--) {
+                    arr[j] = arr[j - 1];
                 }
+                i++; // Skip the duplicated zero
             }
         }
-        for(int print :arr){
-            System.out.println(print);
-        }
+        System.out.println(Arrays.toString(arr));
     }
 }
 /*
