@@ -7,7 +7,7 @@ public class RemoveDuplicateArray26 {
     public static void main(String[] args) {
         int[] nums = {1,1,2};
                 //{10,9,9,0,8,6,5,4,2,1,0};
-        System.out.println(removeDuplicates(nums));
+        System.out.println(removeDuplicatesUsingSet(nums));
     }
 
     public static int removeDuplicates(int[] nums) {
