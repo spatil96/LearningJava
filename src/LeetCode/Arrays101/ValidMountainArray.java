@@ -10,15 +10,17 @@ public class ValidMountainArray {
         int right =s.length-1;
         System.out.println(s.length);//4 FOR {0,3,4,1}
         if(s.length<3) return false;
-        for(int i: s) {
-            if(right==s.length || left == s.length) return false;
+        while(left<right) {
+//            if(right==s.length || left == s.length) return false;
             if (s[right - 1] > s[right]) {
                 right--;
             }
-            if (s[left] < s[left + 1]) {
+            else if (s[left] < s[left + 1]) {
                 left++;
+            }else{
+                break;
             }
         }
-        return left == right;
+        return left>0 && right<s.length-1 && left == right;
     }
 }
