@@ -24,7 +24,7 @@ public class RemoveDuplicateArray26 {
         return insertIndex;
     }
     public static int removeDuplicatesUsingSet(int[] nums) {
-        Set<Integer> s = new HashSet<>();
+        HashSet<Integer> s = new HashSet<>();
         for(int i: nums){
             s.add(i);
         }
