@@ -16,8 +16,8 @@ public class Anagram {
 		int[] store = new int[26];
 
 		for (int i = 0; i < s.length(); i++) {
-			store[s.charAt(i) - 'a']++;
-			store[t.charAt(i) - 'a']--;
+			store[s.charAt(i) -'a']++;
+			store[t.charAt(i) -'a']--;
 		}
 
 		for (int n : store)

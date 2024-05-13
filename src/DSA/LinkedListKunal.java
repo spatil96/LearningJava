@@ -1,4 +1,4 @@
-package DSA.LinkedList;
+package DSA;
 
 public class LinkedListKunal {
     private Node head;

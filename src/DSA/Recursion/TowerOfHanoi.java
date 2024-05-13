@@ -1,4 +1,4 @@
-package DSA.LinkedList.Recursion;
+package DSA.Recursion;
 
 public class TowerOfHanoi {
     static void towerOfHanoi(int n, char from_rod,

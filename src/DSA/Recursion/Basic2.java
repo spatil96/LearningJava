@@ -1,4 +1,4 @@
-package DSA.LinkedList.Recursion;
+package DSA.Recursion;
 
 public class Basic2 {
     public static void main(String[] args) {

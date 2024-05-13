@@ -1,4 +1,4 @@
-package DSA.LinkedList.Recursion;
+package DSA.Recursion;
 
 public class Factorial {
     public static void main(String[] args) {

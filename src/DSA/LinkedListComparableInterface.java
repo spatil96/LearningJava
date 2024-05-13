@@ -1,4 +1,4 @@
-package DSA.LinkedList;
+package DSA;
 import java.util.*;
 class Book implements Comparable<Book>{
     int id;
