@@ -19,7 +19,7 @@ public class FinalVariableAndObjects {
         int temp = sw.b;
         sw.b=sw.a;
         sw.a=temp;
-         System.out.println(sw.a+" "+sw.b);
+         System.out.println(sw.a+" ok"+sw.b);
     }
 }
 class SwapVariables{
