@@ -39,5 +39,40 @@ public class LamdaDemo5Comparator {
         System.out.println("Elements of the TreeMap " +
                 "after sorting are : " + m);
 
+        TreeSet<String> ts= new TreeSet<>(Comparator.reverseOrder());
+//        TreeSet<String> ts=new TreeSet<String>((aStr,bStr) -> bStr.compareTo(aStr));
+//        TreeSet<String> ts= new TreeSet<>(Comparator.naturalOrder());
+        // Add elements to the Treeset
+        ts.add("A");
+        ts.add("B");
+        ts.add("Z");
+        ts.add("D");
+        ts.add("E");
+        ts.add("F");
+        ts.add("G");
+
+        //Display the elements .
+        for(String element : ts)
+            System.out.println(element + "");
+
+        System.out.println();
+
+        TreeMap<Integer, String> mV = new TreeMap<>();
+        mV.put(2, "Apple");
+        mV.put(4, "Mango");
+        mV.put(9, "Orange");
+        mV.put(1, "Banana");
+        mV.put(3, "Grapes");
+
+        List<Map.Entry<Integer, String>> list = new ArrayList<>(mV.entrySet());
+        Collections.sort(list, Comparator.comparing(Map.Entry::getValue));
+
+        TreeMap<Integer, String> sortedByValues = new TreeMap<>();
+        for (Map.Entry<Integer, String> entry : list) {
+            sortedByValues.put(entry.getKey(), entry.getValue());
+        }
+
+        System.out.println("Elements of the TreeMap after sorting based on values are : " + sortedByValues);
+
     }
 }
