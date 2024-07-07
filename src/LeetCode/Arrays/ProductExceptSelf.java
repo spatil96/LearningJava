@@ -2,9 +2,9 @@ package LeetCode.Arrays;
 
 public class ProductExceptSelf {
     public static void main(String[] args) {
-        System.out.println((productExceptSelf(new int[]{1,2,3,4})));
+        System.out.println((ProductFilterExceptSelf(new int[]{1,2,3,4})));
     }
-    public static int[] productExceptSelf(int[] nums) {
+    public static int[] ProductFilterExceptSelf(int[] nums) {
         int[] arr = new int[nums.length];
         int right = 1, left = 1;
         for (int i = 0; i < nums.length; i++) {
