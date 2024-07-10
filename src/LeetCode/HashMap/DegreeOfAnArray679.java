@@ -17,6 +17,7 @@ public class DegreeOfAnArray679 {
                 minLength = i-first_seen.get(nums[i])+1;
             }else if(nums_counts.get(nums[i])==degree){
                 minLength =Math.min(minLength, i-first_seen.get(nums[i])+1);
+                System.out.println("MIn");
             }
         }
         return minLength;
