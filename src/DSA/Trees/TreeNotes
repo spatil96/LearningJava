@@ -1,0 +1,82 @@
+Why?
+Insert, find, add, delete in O(log N) -> Worst case
+Ordered Storage
+Cost efficient - > automatically adaptable
+
+
+Unbalanced Binary Tree (it's not O(log N)) its O(N)
+     1
+      2
+       3
+        4
+         5
+
+how to make sure the tree is balanced?
+Self Balanced Binary Tree (AVL ...)
+
+Binary tree is inefficient for sorted data
+
+Used?
+file systems
+database(AVL fast retrievel of data)
+Algorithms/Networking
+Mathematics
+Decision Trees -> ML Algos
+Huffmann Coding - > Compression of files
+Future datastructures (Binary Heap, Graph- directed acyclic graph)
+
+Properties:
+Size -> Total nodes including parent
+Child and Parent
+Sibling -> Have same parent
+Edge -> joining two nodes
+Height-> Number of edge between nodes
+Leaf nodes
+Level -> Difference of height & node -> Parent is always level 0
+Ancestor and Decendant
+Degree -> number of edges/ children a node has
+
+Types of Binary Tree
+1. Complete Binary tree
+    -   All the level are filled apart from the last level. But, the last level is full from LTR.
+2. Full Binary Tree/ Strict Binary tree
+    -   Either zero or two children. Not single child to a node.
+    -   used for compression
+3. Perfect Binary Tree
+    -   All the level are filled, each node with two child nodes.
+4. Height Balanced Binary Tree
+    -   Average height of O(log N)
+5. Skewed Binary Tree
+    -   Every Node has only one child
+6. Ordered Binary Tree
+    -   Every node has some property or conditions (BST)
+
+Properties
+Perfect Binary Tree
+    - Total number of nodes in Perfect Binary Tree, height  = h
+       total nodes = 2^(n+1) -1
+    - leaf nodes in Perfect BT  is = 2^h
+    - total nodes in PBT on a level  = 2^(n+1) -1 - 2^h = 2^h -1
+    - N= number of leaves
+        log(N+1) level at least
+        n nodes-> log(N+1) minimum levels
+Strict Binary Tree
+    - Strict BT total leaf nodes  = n
+        internal nodes = n-1
+        number of leaf node = number of internal nodes +1
+        number of lead nodes = 1+ number of internal nodes with 2 children
+
+Implementation of Binary Tree
+    - Linked representation
+    - Sequential representation (implemented using arrays - heaps)
+
+Binary Search Tree - O(log N)
+left hand side smaller and right hand side greater
+one item at every level
+
+
+
+
+
+
+
