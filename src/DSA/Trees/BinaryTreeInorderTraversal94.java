@@ -64,6 +64,16 @@ class Solution {
         }
         return res;
     }
+    public List<Integer> inorderTraversalTest(TreeNode root) {
+        List<Integer> li = new ArrayList<Integer>();
+        if(root == null){
+            return li;
+        }
+        inorderTraversal(root.left);
+        li.add(root.val);
+        inorderTraversal(root.right);
+        return li;
+    }
 }
 
 public class BinaryTreeInorderTraversal94 {
@@ -77,7 +87,8 @@ public class BinaryTreeInorderTraversal94 {
         Solution solution = new Solution();
 
         // Perform inorder traversal
-        List<Integer> result = solution.inorderTraversalIterative(root);
+//        List<Integer> result = solution.inorderTraversalIterative(root);
+        List<Integer> result = solution.inorderTraversalTest(root);
 
         // Print the result
         System.out.println("Inorder Traversal: " + result);
