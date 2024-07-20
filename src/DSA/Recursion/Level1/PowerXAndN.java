@@ -1,6 +1,6 @@
 package DSA.Recursion.Level1;
 
-public class PowerXandN {
+public class PowerXAndN {
     public static void main(String[] args) {
         System.out.println(power(2,0));
     }
