@@ -50,8 +50,8 @@ public class InvertBinaryTree226 {
         root.right.left = new TreeNode(3);
 
 //        Solution solution = new Solution();
-        List<Integer> result = invertTree(root);
+//        List<Integer> result = invertTree(root);
 
-        System.out.println("Invert Tree Traversal: " + result);
+//        System.out.println("Invert Tree Traversal: " + result);
     }
 }
