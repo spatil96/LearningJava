@@ -1,0 +1,27 @@
+Other.YAML - Other.YAML Ain’t Markup Language(coz it can store data)
+It is a human-readable data serialization language used for configuration files and data exchange between languages with different data structures.
+
+It is a data format used to exchange data
+Similar to xml  & JSON
+You can only store data, NOT commands
+
+Data Serialization - Other.YAML, JSON, XML
+
+some key aspects of Other.YAML syntax::
+Scalars: These are simple values like strings, integers, and floats. In Other.YAML, scalars can be written without quotes,
+         but quotes can be used to ensure that a value is interpreted as a string.
+Lists: Represented as a sequence of items, each item in a list is preceded by a dash (-) and a space.
+Maps: Also known as associative arrays or dictionaries, maps are represented as a collection of key-value pairs.
+      Each pair is separated by a colon (:) and a space.
+Comments: (#)
+
+benefits:
+Simple and easy to read
+it is a strict syntax - Indentation is important
+Easily convertable to JSON and XML
+more powerful when representing complex data
+parser, various tools available
+
+.yml or .yaml
+
+case sensitive

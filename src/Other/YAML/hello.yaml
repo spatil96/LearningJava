@@ -1,0 +1,113 @@
+"apple" : "good fruit"
+1: "this is scalar"
+---
+# lists
+- apple
+- banana
+- Apple
+---
+cities:
+  - new delhi
+  - mumbai
+  - kolkata
+---
+cities: [new delhi, mumbai]
+---
+{mango : "yellow fruit", season:"summer"}
+---
+# string
+name : sumeet
+lastname : "patil"
+
+bio: hey my name is sumeet
+#and last name is patil -->This is considered as new line as Other.YAML is indented
+
+# write a single line in multiple lines
+message: >
+  this will
+  be 
+  a single 
+  line
+
+---
+# Speicific types
+zero: !!int 0
+positiveNum: !!int 45
+negativeNum: !!int -45
+commaValue: !!int +540_000 #540,000
+marks: !!float 56.89
+booleanVal: !!bool No #n, N, False, FALSE, false
+infinite: !!float .inf
+not a num: .nan
+surname: !!null NUll
+~: this is a null key
+#dates and time
+
+pair example : !!pairs
+  - job: student
+  - job: teacher
+#json equivalent would be
+#{   "pair example": [["job","student"],["job","teacher" ]]}
+
+#dictionary !!omap
+people: !!omap
+  - kunal:
+      name: kunal kushwaha
+      age: 28
+      height: 5'6
+  - rahul:
+      name: rahul
+      age: 26
+      height: 5'6
+#Json -> {
+#  "people": [
+#    {
+#      "kunal": {
+#        "name": "kunal kushwaha",
+#        "age": 28,
+#        "height": "5'6"
+#      }
+#    },
+#    {
+#      "rahul": {
+#        "name": "rahul",
+#        "age": 26,
+#        "height": "5'6"
+#      }
+#    }
+#  ]
+#}
+
+
+#reusing the properties using &base / also known as anchors
+likings: &likes
+  fav fruit: mango
+  song: indian
+  dislike: grape
+person1:
+  name: sumeet
+  <<: *likes
+person2:
+  name: amelia
+  <<: *likes
+  dislike: berries
+# json equivalent
+#{
+#  "likings": {
+#    "fav fruit": "mango",
+#    "song": "indian",
+#    "dislike": "grape"
+#  },
+#  "person1": {
+#    "name": "sumeet",
+#    "fav fruit": "mango",
+#    "song": "indian",
+#    "dislike": "grape"
+#  },
+#  "person2": {
+#    "name": "amelia",
+#    "fav fruit": "mango",
+#    "song": "indian",
+#    "dislike": "berries"
+#  }
+#}
