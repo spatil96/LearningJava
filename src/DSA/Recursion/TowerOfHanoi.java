@@ -20,6 +20,6 @@ public class TowerOfHanoi {
         int N = 3;
 
         // A, B and C are names of rods
-        towerOfHanoi(N, 'A', 'C', 'B');
+        towerOfHanoi(N, 'A', 'B', 'C');
     }
 }
