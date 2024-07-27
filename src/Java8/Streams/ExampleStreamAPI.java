@@ -26,7 +26,8 @@ public class ExampleStreamAPI {
         System.out.println(namesOfStream);
 
         List<String> moreNames = Arrays.asList(
-                "Sumeet", "Shubham", "Ankit", "Samsher", "Deeepanjay","jaydeep");
+                "Sumeet", "Shubham", "Ankit", "Samsher",
+                "Deeepanjay","jaydeep");
 
         List<String> filterNames = moreNames.stream()
                 .filter(name->name.startsWith("S"))
@@ -34,8 +35,5 @@ public class ExampleStreamAPI {
                 .collect(Collectors.toList());
 
         System.out.println(filterNames);
-
-
-
     }
 }
