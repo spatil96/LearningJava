@@ -1,7 +1,16 @@
 package DSA;
 
 import java.util.Random;
-
+/*
+1. Worst Case time complexity when pivot is first or last and array is already sorted
+2. best way to choose pivot is random, or median. In case of Random Most of the time the time complexity is as O(n*log(n))
+3. Performance depends largely on Pivot selection
+*/
+/*Steps to do
+1. Choose the pivot
+2. Partision the Array
+3. Recursive call on the sub arrays of left and right side
+*/
 public class QuickSort {
     public static void main(String[] args) {
         Random rand = new Random();
