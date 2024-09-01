@@ -6,8 +6,9 @@ public class KeyPadCombination {
     };
 
     public static void main(String[] args) {
-        ArrayList<String> st = getKPC("678");
-        System.out.println(st);
+        //ArrayList<String> st = getKPC("678");
+       // System.out.println(st);
+        printCodes("123","");
     }
     private static ArrayList<String> getKPC(String num){
         ArrayList<String> res = new ArrayList<>();
@@ -32,5 +33,20 @@ public class KeyPadCombination {
         }
         System.out.println(res.size());
         return res;
+    }
+    private static void printCodes(String ques, String ans){
+        if(ques.isEmpty()){
+            System.out.println("ans=>"+ans);
+            return;
+        }
+        char ch = ques.charAt(0);
+        System.out.println("ch=>"+ch);
+        String ros = ques.substring(1);
+        System.out.println("ros =>"+ros);
+        String codeForCh = codes[ch - '0'];
+        for(int i=0; i <codeForCh.length() ; i++){
+            char cho = codeForCh.charAt(i);
+            printCodes(ros,ans+cho);
+        }
     }
 }

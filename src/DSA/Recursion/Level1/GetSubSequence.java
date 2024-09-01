@@ -5,7 +5,32 @@ import java.util.List;
 
 public class GetSubSequence {
     public static void main(String[] args) {
-        System.out.println(getSubsequence("abcd"));
+        long startTimePrintSS = System.nanoTime();
+        printSS("abcd", "");
+        long endTimePrintSS = System.nanoTime();
+        System.out.println("Time taken by printSS: " +
+                (endTimePrintSS - startTimePrintSS) + " nanoseconds");
+
+        // Measure time for getSubsequence method
+        long startTimeGetSubsequence = System.nanoTime();
+        List<String> subsequence = getSubsequence("abcd");
+        long endTimeGetSubsequence = System.nanoTime();
+        System.out.println("Time taken by getSubsequence: " +
+                (endTimeGetSubsequence - startTimeGetSubsequence) + " nanoseconds");
+    }
+    private static void printSS(String ques, String ans){
+        long startTimePrintSS = System.nanoTime();
+        if(ques.isEmpty()){
+            System.out.println(ans);
+            return ;
+        }
+        char ch = ques.charAt(0);
+        String ros = ques.substring(1);
+        printSS(ros, ans+"_");
+        printSS(ros, ans+ch);
+        long endTimePrintSS = System.nanoTime();
+        System.out.println("Time taken by printSS: " +
+                (endTimePrintSS - startTimePrintSS) + " nanoseconds");
     }
     private static List<String> getSubsequence(String str){
         List<String> result = new ArrayList<>();
@@ -23,4 +48,5 @@ public class GetSubSequence {
         System.out.println(result.size());
         return result;
     }
+
 }
