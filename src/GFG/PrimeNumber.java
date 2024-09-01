@@ -1,5 +1,8 @@
 package GFG;
-
+/*
+* Both have time complexity of O(sqrt(n)) bcoz of  i * i <= n
+* Both the appriach have O(1) space
+* */
 public class PrimeNumber {
     public static void main(String[] args) {
         long number = 29999990000000000L; // Example number
@@ -21,6 +24,19 @@ public class PrimeNumber {
                 return false;
             }
         }
+
+        return true;
+    }
+    static boolean isPrime1(int n)
+    {
+        // Corner case
+        if (n <= 1)
+            return false;
+
+        // Check from 2 to square root of n
+        for (int i = 2; i * i <= n; i++)
+            if (n % i == 0)
+                return false;
 
         return true;
     }
