@@ -46,7 +46,8 @@ public class GetMazePaths {
             this.path = path;
         }
     }
-    private static ArrayList<String> getMazePathsBFS(int sr, int sc, int dr, int dc) {
+    private static ArrayList<String> getMazePathsBFS(
+            int sr, int sc, int dr, int dc) {
         ArrayList<String> result = new ArrayList<>();
         Queue<Pair> queue = new LinkedList<>();
 
