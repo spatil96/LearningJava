@@ -7,7 +7,7 @@ import java.util.Queue;
 public class GetMazePaths {
     public static void main(String[] args) {
         System.out.println(getMazePaths(1,1,3,3));
-        System.out.println(getMazePathsBFS(1,1,3,3));
+       // System.out.println(getMazePathsBFS(1,1,3,3));
     }
     //DFS
     private static ArrayList<String> getMazePaths
