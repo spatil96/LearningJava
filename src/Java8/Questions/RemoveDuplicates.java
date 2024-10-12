@@ -19,5 +19,11 @@ public class RemoveDuplicates {
 
         // Printing the list without duplicates
         System.out.println("List without duplicates: " + numbersWithoutDuplicates);
+        // Example 2: String List
+        List<String> fruits = Arrays.asList("apple", "orange", "apple", "banana");
+        List<String> uniqueFruits = fruits.stream()
+                .distinct()  // Remove duplicates
+                .collect(Collectors.toList());
+        System.out.println("Unique fruits: " + uniqueFruits);
     }
 }
