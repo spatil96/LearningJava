@@ -14,8 +14,8 @@ public class EmployeeSortingExample {
         );
 
         // Step 3: Sort the list by salary
-        employees.sort((e1, e2) -> Integer.compare((int) e1.getSalary(), (int) e2.getSalary()));
-
+//        employees.sort((e1, e2) -> Integer.compare((int) e1.getSalary(), (int) e2.getSalary()));
+        employees.sort((e1, e2) -> Integer.compare((int) e1.getAge(), (int) e2.getAge()));
         // Step 4: Display the sorted list
         System.out.println("Employees sorted by salary:");
         employees.forEach(System.out::println);

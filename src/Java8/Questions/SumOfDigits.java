@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class SumOfDigits {
     public static void main(String[] args) {
         // Creating a Scanner object to read input
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        String number = scanner.nextLine();
-        scanner.close(); // Closing the scanner
-
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter a number:");
+//        String number = scanner.nextLine();
+//        scanner.close(); // Closing the scanner
+String number = "SUMIT";
         // Calculating the sum of digits
         int sum = number.chars() // Creating an IntStream of chars (ASCII values)
                          .map(Character::getNumericValue) // Converting each ASCII value to its numeric value

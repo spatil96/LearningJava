@@ -13,8 +13,10 @@ public class EmployeeDepartmentCount {
         );
 
         Map<String, Long> departmentCount = employees.stream()
-                                                     .collect(Collectors.groupingBy(Employee::getDeptName, Collectors.counting()));
+                                                     .collect(Collectors.groupingBy
+                                                             (Employee::getDeptName, Collectors.counting()));
 
-        departmentCount.forEach((deptName, count) -> System.out.println("Department: " + deptName + ", Number of Employees: " + count));
+        departmentCount.forEach((deptName, count) ->
+                System.out.println("Department: " + deptName + ", Number of Employees: " + count));
     }
 }

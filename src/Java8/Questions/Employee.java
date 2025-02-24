@@ -12,7 +12,22 @@ public class Employee {
     private String city;
     private int yearOfJoining;
 
-    public Employee(int id, String name, int age, long salary, String gender, String deptName, String city,int yearOfJoining) {
+    public Employee(int id, String name, int age, long salary, String gender, String deptName, String city) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+        this.gender = gender;
+        this.deptName = deptName;
+        this.city = city;
+    }
+    public Employee(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+
+    public Employee(int id, String name, int age, long salary, String gender, String deptName, String city, int yearOfJoining) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -23,8 +38,8 @@ public class Employee {
         this.yearOfJoining = yearOfJoining;
     }
 
-    public Employee(String name, int i) {
-    }
+//    public Employee(String name, int i) {
+//    }
 
     public int getAge() {
         return age;
